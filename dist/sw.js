@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.fd6a464b7dabd23351113a4e6862d14f.js"
+  "precache-manifest.28173b4facc1e4313a49d3c08123a2e0.js"
 );
 
 workbox.core.skipWaiting();
@@ -28,3 +28,5 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerRoute("https://direboar.github.io/.*", new workbox.strategies.NetworkFirst(), 'GET');
